@@ -1,0 +1,28 @@
+# Drop this in the root of your PRIVATE notes repo as .gitignore
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Secrets / credentials - keep these out of history
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+
+# Big binaries - git is for text, not audio dumps.
+# The inbox holds raw recordings and its _archive keeps them after
+# transcription; neither belongs in git.
+*.mp3
+*.mp4
+*.wav
+*.m4a
+VoiceMemoInbox/

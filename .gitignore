@@ -1,0 +1,30 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Guardrail: this is the public tooling repo. Meeting content and audio must
+# never land here - they belong in the private notes repo.
+*.m4a
+*.mp3
+*.wav
+*.mp4
+*.caf
+VoiceMemoInbox/
+
+# Rendered LaunchAgent (install.sh writes it to ~/Library/LaunchAgents, but
+# don't let a stray copy with real paths get committed).
+*.plist
+!launchd/*.plist.template

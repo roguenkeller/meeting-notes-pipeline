@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Template. Do not install this file directly - ./install.sh substitutes the
+  __PLACEHOLDERS__ below and writes the result to
+  ~/Library/LaunchAgents/__LABEL__.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>__LABEL__</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>__SYNC_SCRIPT__</string>
+    </array>
+
+    <!-- How often to check the inbox and push, in seconds (600 = 10 minutes). -->
+    <key>StartInterval</key>
+    <integer>__INTERVAL__</integer>
+
+    <!-- Also run once as soon as you log in. -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>__LOG_FILE__</string>
+    <key>StandardErrorPath</key>
+    <string>__LOG_FILE__</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <!-- launchd starts with a bare-bones PATH; brew/git/python live here. -->
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <!-- Which notes repo to transcribe into, commit, and push. -->
+        <key>NOTES_REPO</key>
+        <string>__NOTES_REPO__</string>
+    </dict>
+</dict>
+</plist>
