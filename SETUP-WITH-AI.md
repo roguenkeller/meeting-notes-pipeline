@@ -29,10 +29,12 @@ records voice memos, transcribes them locally with faster-whisper, files each
 transcript by customer/account into a private git repo, and pushes it
 automatically on a timer.
 
-The project and its full README are at:
+The project is at:
 https://github.com/roguenkeller/meeting-notes-pipeline
-Read that README first if you're able to browse. If you can't browse, tell me,
-and I'll paste it in.
+The README there is the short setup guide; the wiki has the full detail:
+https://github.com/roguenkeller/meeting-notes-pipeline/wiki
+Read both if you're able to browse. If you can't browse, tell me, and I'll
+paste in what you need.
 
 HOW TO WORK WITH ME
 - Interview me FIRST, then give me the commands. Don't dump the whole plan up
@@ -123,7 +125,8 @@ the log lives.
 
 ## If something goes wrong
 
-The assistant should diagnose from your terminal output, but the
-[Troubleshooting](README.md#troubleshooting) section of the README covers the
-common failures directly — an empty log, `faster-whisper` not being found by the
-background job, failed pushes, and transcripts landing in `misc/`.
+The assistant should diagnose from your terminal output, but the wiki's
+[Troubleshooting](https://github.com/roguenkeller/meeting-notes-pipeline/wiki/Troubleshooting)
+page covers the common failures directly — an empty log, `faster-whisper` not
+being found by the background job, failed pushes, and transcripts landing in
+`misc/`.
