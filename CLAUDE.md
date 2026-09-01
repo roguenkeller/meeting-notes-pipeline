@@ -108,8 +108,22 @@ must move together are known.
 
 ## What is deliberately absent
 
-- **No `docs/` directory.** `README.md` and `SETUP-WITH-AI.md` at the root are
-  the documentation; a `docs/` tree for two files would be indirection.
+- **No `docs/` directory.** Documentation is split three ways instead:
+  `README.md` is the execution guide and nothing else, `SETUP-WITH-AI.md` is the
+  copy-paste prompt, and the **wiki** carries the reference — how it works, the
+  naming convention, authentication, configuration, troubleshooting, privacy,
+  and these handoff notes. An in-repo `docs/` tree would duplicate the wiki.
+
+  The wiki is a **separate git repository**, not a directory here. Clone it as a
+  sibling to edit it:
+
+  ```bash
+  git clone git@github.com:roguenkeller/meeting-notes-pipeline.wiki.git
+  ```
+
+  **Keep the README short.** It grew to 330 lines by absorbing reference material
+  and stopped answering the question a new reader actually has. Detail that wants
+  to expand belongs in the wiki.
 - **No CI.** Nothing here compiles, and the meaningful test needs a Mac with
   `ffmpeg`, `faster-whisper` and `launchd`. Verification is the manual end-to-end
   run above.
