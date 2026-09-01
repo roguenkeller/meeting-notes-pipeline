@@ -108,7 +108,7 @@ repo. Create it empty on GitHub first, marked private, then:
 ```bash
 mkdir -p ~/notes && cd ~/notes
 git init
-curl -o .gitignore https://raw.githubusercontent.com/OWNER/REPO/main/templates/notes-repo.gitignore
+curl -o .gitignore https://raw.githubusercontent.com/roguenkeller/meeting-notes-pipeline/main/templates/notes-repo.gitignore
 git add .gitignore && git commit -m "initial commit"
 git remote add origin git@github.com:YOU/notes.git
 git push -u origin main
@@ -128,7 +128,7 @@ git -C ~/notes config user.email "you@company.com"
 ### 3. Install the pipeline
 
 ```bash
-git clone git@github.com:OWNER/REPO.git ~/meeting-notes-pipeline
+git clone https://github.com/roguenkeller/meeting-notes-pipeline.git ~/meeting-notes-pipeline
 cd ~/meeting-notes-pipeline
 ./install.sh ~/notes
 ```
