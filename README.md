@@ -47,6 +47,7 @@ Two scripts, one scheduler:
 | `install.sh` | Checks dependencies, renders the template with your real paths, loads the agent. |
 | `uninstall.sh` | Unloads and removes the agent. Leaves your notes alone. |
 | `templates/notes-repo.gitignore` | The `.gitignore` your private notes repo should use. |
+| `SETUP-WITH-AI.md` | Copy-paste prompt for setting this up with an AI assistant. |
 
 ---
 
@@ -89,6 +90,12 @@ Source: 2026-06-29 - Contoso - Discovery Call.m4a
 ## Setup
 
 macOS only — it relies on `launchd`. Roughly 15 minutes.
+
+> **Want an AI assistant to walk you through it?**
+> [SETUP-WITH-AI.md](SETUP-WITH-AI.md) has a copy-paste prompt for ChatGPT (or
+> any capable assistant). It interviews you about your paths, GitHub account,
+> and preferences, then takes you through the steps one command at a time.
+> The rest of this section is the manual version.
 
 ### 1. Install the dependencies
 
